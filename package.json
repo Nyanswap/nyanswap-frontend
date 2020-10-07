@@ -37,6 +37,7 @@
     "@web3-react/walletconnect-connector": "^6.1.1",
     "@web3-react/walletlink-connector": "^6.0.9",
     "ajv": "^6.12.3",
+    "babel-plugin-styled-components": "^1.11.1",
     "cids": "^1.0.0",
     "copy-to-clipboard": "^3.2.0",
     "cross-env": "^7.0.2",
@@ -105,5 +106,10 @@
       "last 1 safari version"
     ]
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "compass-mixins": "^0.12.10",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2"
+  }
 }

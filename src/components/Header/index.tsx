@@ -3,23 +3,21 @@ import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
 
+import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
-import Wordmark from '../../assets/svg/wordmark.svg'
-import WordmarkDark from '../../assets/svg/wordmark_white.svg'
+import LogoTypeOnlyColor from '../../assets/svg/logo_typeonly_color.svg'
 import { useActiveWeb3React } from '../../hooks'
-import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
 import Menu from '../Menu'
 
-import Row, { RowBetween } from '../Row'
+import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
-import VersionSwitch from './VersionSwitch'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -30,6 +28,8 @@ const HeaderFrame = styled.div`
   top: 0;
   position: absolute;
   z-index: 2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     padding: 12px 0 0 0;
     width: calc(100%);
@@ -45,6 +45,22 @@ const HeaderElement = styled.div`
 const HeaderElementWrap = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 960px) {
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    justify-self: center;
+    max-width: 960px;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 99;
+    height: 72px;
+    border-radius: 12px 12px 0px 0px;
+    background-color: rgb(255, 255, 255);
+  }
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     margin-top: 0.5rem;
@@ -61,12 +77,55 @@ const Title = styled.a`
   }
 `
 
-const TitleText = styled(Row)`
-  width: fit-content;
-  white-space: nowrap;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    display: none;
+const NavLinkWrapper = styled.div`
+  box-sizing: border-box;
+  margin: 0 50px;
+  min-width: 0px;
+  width: 100%;
+  display: flex;
+  padding: 0px;
+  -webkit-box-align: center;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    margin: 0;
+    padding: 1rem 0px 1rem 1rem;
+    justify-content: flex-end;
+  }
+`
+
+const activeClassName = 'ACTIVE'
+
+const StyledNavLink = styled(NavLink).attrs({
+  activeClassName
+})`
+  ${({ theme }) => theme.flexRowNoWrap}
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.text3};
+  opacity: 0.5;
+  font-size: 20px;
+  margin: 0px 24px;
+
+  &.${activeClassName} {
+    opacity: 1;
+    border-radius: 12px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.text3};
+  }
+
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    margin: 0px 6px;
   `};
+
+  :hover,
+  :focus {
+  }
 `
 
 const AccountElement = styled.div<{ active: boolean }>`
@@ -97,16 +156,17 @@ const NetworkCard = styled(YellowCard)`
   padding: 8px 12px;
 `
 
-const UniIcon = styled.div`
-  transition: transform 0.3s ease;
-  :hover {
-    transform: rotate(-5deg);
-  }
+const NyanIconDiv = styled.div`
+  display: flex;
   ${({ theme }) => theme.mediaWidth.upToSmall`
     img { 
-      width: 4.5rem;
+      width: 120px;
     }
   `};
+`
+
+const NyanIcon = styled.img`
+  width: 280px;
 `
 
 const HeaderControls = styled.div`
@@ -136,22 +196,25 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
 
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
+  const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  const [isDark] = useDarkModeManager()
 
   return (
     <HeaderFrame>
-      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
-        <HeaderElement>
+      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 1rem 1rem">
+        <HeaderElement style={{ width: '100%' }}>
           <Title href=".">
-            <UniIcon>
-              <img src={isDark ? LogoDark : Logo} alt="logo" />
-            </UniIcon>
-            <TitleText>
-              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
-            </TitleText>
+            <NyanIconDiv>
+              <NyanIcon src={LogoTypeOnlyColor} alt="logo" />
+            </NyanIconDiv>
           </Title>
+
+          <NavLinkWrapper>
+            <StyledNavLink to={'/swap'}>{t('swap')}</StyledNavLink>
+            <StyledNavLink to={'/pool'}>{t('pool')}</StyledNavLink>
+            <StyledNavLink to={'/charts'}>{t('charts')}</StyledNavLink>
+          </NavLinkWrapper>
         </HeaderElement>
         <HeaderControls>
           <HeaderElement>
@@ -164,13 +227,16 @@ export default function Header() {
                   {userEthBalance?.toSignificant(4)} ETH
                 </BalanceText>
               ) : null}
-              <Web3Status />
             </AccountElement>
           </HeaderElement>
           <HeaderElementWrap>
-            <VersionSwitch />
-            <Settings />
-            <Menu />
+            <HeaderElement>
+              <Web3Status />
+            </HeaderElement>
+            <HeaderElement>
+              <Settings />
+              <Menu />
+            </HeaderElement>
           </HeaderElementWrap>
         </HeaderControls>
       </RowBetween>

@@ -56,13 +56,12 @@ export function useIsDarkMode(): boolean {
 
 export function useDarkModeManager(): [boolean, () => void] {
   const dispatch = useDispatch<AppDispatch>()
-  const darkMode = useIsDarkMode()
 
   const toggleSetDarkMode = useCallback(() => {
-    dispatch(updateUserDarkMode({ userDarkMode: !darkMode }))
-  }, [darkMode, dispatch])
+    dispatch(updateUserDarkMode({ userDarkMode: false }))
+  }, [false, dispatch])
 
-  return [darkMode, toggleSetDarkMode]
+  return [false, toggleSetDarkMode]
 }
 
 export function useIsExpertMode(): boolean {
