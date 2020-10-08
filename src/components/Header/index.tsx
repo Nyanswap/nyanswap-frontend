@@ -28,7 +28,7 @@ const HeaderFrame = styled.div`
   top: 0;
   position: absolute;
   z-index: 2;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     padding: 12px 0 0 0;
