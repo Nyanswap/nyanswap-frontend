@@ -43,17 +43,18 @@ $purple: #55ffa6;
   z-index: 100;
   position: absolute;
   left: 50%;
-  top: 75%;
+  top: 80%;
   width: 165px;
   height: 100px;
   margin: {
     top: -50px;
     left: -82px;
+    bottom: 120px;
   }
   animation: nyan 400ms step-start infinite;
 
   @media(max-height: 820px) {
-    top: 615px;
+    top: 660px;
   }
 
   .body {
