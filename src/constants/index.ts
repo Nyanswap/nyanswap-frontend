@@ -4,7 +4,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
 // The V2Router02 Smart Contract Deployed on TestNet Ropsten
-export const ROUTER_ADDRESS = '0xA7e6A601D51B8CB808c9020a116777fEB442fD98'
+export const ROUTER_ADDRESS = '0x55C9d9625aEE1c1C6Bc5FFB9F7e2D71c58BbA8e3'
 
 // a list of tokens by chain
 type ChainTokenList = {
