@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Pair } from '@uniswap/sdk'
+import { Pair } from '@nyanswap/sdk'
 import { Link } from 'react-router-dom'
 
 import Question from '../../components/QuestionHelper'
