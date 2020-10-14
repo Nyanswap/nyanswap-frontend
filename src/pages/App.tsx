@@ -92,8 +92,8 @@ export default function App() {
             </Web3ReactManager>
             <Marginer />
             <StarBackground />
-            <Nyancat></Nyancat>
           </BodyWrapper>
+          <Nyancat></Nyancat>
         </AppWrapper>
       </HashRouter>
     </Suspense>

@@ -33,17 +33,19 @@ $purple: #55ffa6;
 }
 
 .nyanWrapper {
-  z-index: -1;
+  z-index: -10;
   width: 50px;
   height: 85px;
   margin-bottom: 100px;
+  top: 80%;
+  left: calc(50% - 20px);
+  position: fixed;
 }
 
 .nyancat {
-  z-index: 100;
+  z-index: -10;
   position: absolute;
   left: 50%;
-  top: 80%;
   width: 165px;
   height: 100px;
   margin: {
@@ -53,9 +55,9 @@ $purple: #55ffa6;
   }
   animation: nyan 400ms step-start infinite;
 
-  @media(max-height: 820px) {
-    top: 660px;
-  }
+  // @media(max-height: 820px) {
+  //   top: 660px;
+  // }
 
   .body {
     @extend .sprite;
