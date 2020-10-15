@@ -126,6 +126,16 @@ $purple: #55ffa6;
   }
 }
 
+.starBackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1980px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -100;
+}
+
 .stars {
   position: relative;
   width: 100%;
@@ -146,58 +156,122 @@ $purple: #55ffa6;
         size: 112px 2px;
         repeat: no-repeat;
       }
-      // animation: star 300ms step-start infinite alternate;
+      animation: star 300ms step-start infinite alternate;
+    }
+  }
+  @for $i from 1 through 10 {
+    .star:nth-child(#{$i}) {
+      top: $i * 100px;
+      left: $i * 100px;
+    }
+  }
+
+  @for $i from 11 through 20 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 10) * 100px;
+      left: ($i - 10) * 100 + 180px;
+    }
+  }
+
+  @for $i from 21 through 30 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 20) * 100px;
+      left: ($i - 20) * 100 + 360px;
+    }
+  }
+
+  @for $i from 31 through 40 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 30) * 100px;
+      left: ($i - 30) * 100 + 540px;
+    }
+  }
+
+  @for $i from 41 through 50 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 40) * 100px;
+      left: ($i - 40) * 100 + 720px;
+    }
+  }
+
+  @for $i from 51 through 60 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 50) * 100px;
+      left: ($i - 50) * 100 + 900px;
+    }
+  }
+
+  @for $i from 61 through 70 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 60) * 100px;
+      left: ($i - 60) * 100 + 1080px;
+    }
+  }
+
+  @for $i from 71 through 80 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 70) * 100px;
+      left: ($i - 70) * 100 + 1260px;
+    }
+  }
+
+  @for $i from 81 through 90 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 80) * 100px;
+      left: ($i - 80) * 100 + 1440px;
+    }
+  }
+
+  @for $i from 91 through 100 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 90) * 100px;
+      left: ($i - 90) * 100 - 180px;
+    }
+  }
+
+  @for $i from 101 through 110 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 100) * 100px;
+      left: ($i - 100) * 100 - 360px;
+    }
+  }
+
+  @for $i from 111 through 120{
+    .star:nth-child(#{$i}) {
+      top: ($i - 110) * 100px;
+      left: ($i - 110) * 100 - 540px;
+    }
+  }
+
+  @for $i from 121 through 130{
+    .star:nth-child(#{$i}) {
+      top: ($i - 120) * 100px;
+      left: ($i - 120) * 100 - 720px;
+    }
+  }
+
+  @for $i from 131 through 140{
+    .star:nth-child(#{$i}) {
+      top: ($i - 130) * 100px;
+      left: ($i - 130) * 100 - 900px;
+    }
+  }
+
+  @for $i from 141 through 150 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 140) * 100px;
+      left: ($i - 140) * 100 + 1620px;
+    }
+  }
+
+  @for $i from 151 through 160 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 150) * 100px;
+      left: ($i - 150) * 100 + 1800px;
     }
   }
 }
-.star:nth-child(1) {
-  top: -10px;
-  left: 70px;
-}
-.star:nth-child(2) {
-  top: 30px;
-  left: 250px;
-}
-.star:nth-child(3) {
-  top: 70px;
-  left: 350px;
-}
-.star:nth-child(4) {
-  top: 100px;
-  left: 20px;
-}
-.star:nth-child(5) {
-  top: 200px;
-  left: 300px;
-}
-.star:nth-child(6) {
-  top: 250px;
-  left: 100px;
-}
-.star:nth-child(7) {
-  top: -10px;
-  left: 470px;
-}
-.star:nth-child(8) {
-  top: 30px;
-  left: 650px;
-}
-.star:nth-child(9) {
-  top: 70px;
-  left: 750px;
-}
-.star:nth-child(10) {
-  top: 100px;
-  left: 420px;
-}
-.star:nth-child(11) {
-  top: 200px;
-  left: 700px;
-}
-.star:nth-child(12) {
-  top: 250px;
-  left: 500px;
-}
+
 .body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10px, #000000 10px, #000000 95px, rgba(0, 0, 0, 0) 95px, rgba(0, 0, 0, 0) 105px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5px, #000000 5px, #000000 10px, #003dff 10px, #003dff 95px, #000000 95px, #000000 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 20px, #55ffa6 20px, #55ffa6 85px, #003dff 85px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 15px, #55ffa6 15px, #55ffa6 30px, #003dff 30px, #003dff 40px, #55ffa6 40px, #55ffa6 90px, #003dff 90px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 25px, #003dff 25px, #003dff 35px, #55ffa6 35px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 20px, #003dff 20px, #003dff 30px, #55ffa6 30px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 15px, #003dff 15px, #003dff 55px, #55ffa6 55px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 20px, #003dff 20px, #003dff 30px, #55ffa6 30px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 25px, #003dff 25px, #003dff 35px, #55ffa6 35px, #55ffa6 40px, #003dff 40px, #003dff 50px, #55ffa6 50px, #55ffa6 90px, #003dff 90px, #003dff 95px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 30px, #003dff 30px, #003dff 40px, #55ffa6 40px, #55ffa6 45px, #003dff 45px, #003dff 55px, #55ffa6 55px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 60px, #003dff 60px, #003dff 70px, #55ffa6 70px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 30px, #003dff 30px, #003dff 85px, #55ffa6 85px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 55px, #003dff 55px, #003dff 65px, #55ffa6 65px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 10px, #55ffa6 10px, #55ffa6 45px, #003dff 45px, #003dff 55px, #55ffa6 55px, #55ffa6 95px, #003dff 95px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 15px, #55ffa6 15px, #55ffa6 40px, #003dff 40px, #003dff 50px, #55ffa6 50px, #55ffa6 90px, #003dff 90px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, #000000 0%, #000000 5px, #003dff 5px, #003dff 20px, #55ffa6 20px, #55ffa6 85px, #003dff 85px, #003dff 100px, #000000 100px, #000000 105px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5px, #000000 5px, #000000 10px, #003dff 10px, #003dff 95px, #000000 95px, #000000 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 105px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10px, #000000 10px, #000000 95px, rgba(0, 0, 0, 0) 95px, rgba(0, 0, 0, 0) 105px)
 }
@@ -218,232 +292,7 @@ $purple: #55ffa6;
 }
 
 .star > span {
-  background-image: linear-gradient(
-      left,
-      transparent 0,
-      transparent 12px,
-      white 12px,
-      white 16px,
-      transparent 16px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 12px,
-      white 12px,
-      white 16px,
-      transparent 16px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 4px,
-      white 4px,
-      white 8px,
-      transparent 8px,
-      transparent 20px,
-      white 20px,
-      white 24px,
-      transparent 24px,
-      transparent 40px,
-      white 40px,
-      white 44px,
-      transparent 44px,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 4px,
-      white 4px,
-      white 8px,
-      transparent 8px,
-      transparent 20px,
-      white 20px,
-      white 24px,
-      transparent 24px,
-      transparent 40px,
-      white 40px,
-      white 44px,
-      transparent 44px,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      white 0,
-      white 4px,
-      transparent 4px,
-      transparent 24px,
-      white 24px,
-      white 28px,
-      transparent 28px,
-      transparent 32px,
-      white 32px,
-      white 36px,
-      transparent 36px,
-      transparent 40px,
-      white 40px,
-      white 44px,
-      transparent 44px,
-      transparent 48px,
-      white 48px,
-      white 52px,
-      transparent 52px,
-      transparent 60px,
-      white 60px,
-      white 68px,
-      transparent 68px,
-      transparent 72px,
-      white 72px,
-      white 80px,
-      transparent 80px,
-      transparent 96px,
-      white 96px,
-      white 100px,
-      transparent 100px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      white 0,
-      white 4px,
-      transparent 4px,
-      transparent 24px,
-      white 24px,
-      white 28px,
-      transparent 28px,
-      transparent 32px,
-      white 32px,
-      white 36px,
-      transparent 36px,
-      transparent 40px,
-      white 40px,
-      white 44px,
-      transparent 44px,
-      transparent 48px,
-      white 48px,
-      white 52px,
-      transparent 52px,
-      transparent 60px,
-      white 60px,
-      white 68px,
-      transparent 68px,
-      transparent 72px,
-      white 72px,
-      white 80px,
-      transparent 80px,
-      transparent 96px,
-      white 96px,
-      white 100px,
-      transparent 100px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 4px,
-      white 4px,
-      white 8px,
-      transparent 8px,
-      transparent 20px,
-      white 20px,
-      white 24px,
-      transparent 24px,
-      transparent 40px,
-      white 40px,
-      white 44px,
-      transparent 44px,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 4px,
-      white 4px,
-      white 8px,
-      transparent 8px,
-      transparent 20px,
-      white 20px,
-      white 24px,
-      transparent 24px,
-      transparent 40px,
-      white 40px,
-      white 44px,
-      transparent 44px,
-      transparent 68px,
-      white 68px,
-      white 72px,
-      transparent 72px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 12px,
-      white 12px,
-      white 16px,
-      transparent 16px,
-      transparent 112px
-    ),
-    linear-gradient(
-      left,
-      transparent 0,
-      transparent 12px,
-      white 12px,
-      white 16px,
-      transparent 16px,
-      transparent 112px
-    );
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 12px, #ffffff 12px, #ffffff 16px, rgba(0, 0, 0, 0) 16px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 12px, #ffffff 12px, #ffffff 16px, rgba(0, 0, 0, 0) 16px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4px, #ffffff 4px, #ffffff 8px, rgba(0, 0, 0, 0) 8px, rgba(0, 0, 0, 0) 20px, #ffffff 20px, #ffffff 24px, rgba(0, 0, 0, 0) 24px, rgba(0, 0, 0, 0) 40px, #ffffff 40px, #ffffff 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4px, #ffffff 4px, #ffffff 8px, rgba(0, 0, 0, 0) 8px, rgba(0, 0, 0, 0) 20px, #ffffff 20px, #ffffff 24px, rgba(0, 0, 0, 0) 24px, rgba(0, 0, 0, 0) 40px, #ffffff 40px, #ffffff 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, #ffffff 0%, #ffffff 4px, rgba(0, 0, 0, 0) 4px, rgba(0, 0, 0, 0) 24px, #ffffff 24px, #ffffff 28px, rgba(0, 0, 0, 0) 28px, rgba(0, 0, 0, 0) 32px, #ffffff 32px, #ffffff 36px, rgba(0, 0, 0, 0) 36px, rgba(0, 0, 0, 0) 40px, #ffffff 40px, #ffffff 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 48px, #ffffff 48px, #ffffff 52px, rgba(0, 0, 0, 0) 52px, rgba(0, 0, 0, 0) 60px, #ffffff 60px, #ffffff 68px, rgba(0, 0, 0, 0) 68px, rgba(0, 0, 0, 0) 72px, #ffffff 72px, #ffffff 80px, rgba(0, 0, 0, 0) 80px, rgba(0, 0, 0, 0) 96px, #ffffff 96px, #ffffff 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, #ffffff 0%, #ffffff 4px, rgba(0, 0, 0, 0) 4px, rgba(0, 0, 0, 0) 24px, #ffffff 24px, #ffffff 28px, rgba(0, 0, 0, 0) 28px, rgba(0, 0, 0, 0) 32px, #ffffff 32px, #ffffff 36px, rgba(0, 0, 0, 0) 36px, rgba(0, 0, 0, 0) 40px, #ffffff 40px, #ffffff 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 48px, #ffffff 48px, #ffffff 52px, rgba(0, 0, 0, 0) 52px, rgba(0, 0, 0, 0) 60px, #ffffff 60px, #ffffff 68px, rgba(0, 0, 0, 0) 68px, rgba(0, 0, 0, 0) 72px, #ffffff 72px, #ffffff 80px, rgba(0, 0, 0, 0) 80px, rgba(0, 0, 0, 0) 96px, #ffffff 96px, #ffffff 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4px, #ffffff 4px, #ffffff 8px, rgba(0, 0, 0, 0) 8px, rgba(0, 0, 0, 0) 20px, #ffffff 20px, #ffffff 24px, rgba(0, 0, 0, 0) 24px, rgba(0, 0, 0, 0) 40px, #ffffff 40px, #ffffff 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4px, #ffffff 4px, #ffffff 8px, rgba(0, 0, 0, 0) 8px, rgba(0, 0, 0, 0) 20px, #ffffff 20px, #ffffff 24px, rgba(0, 0, 0, 0) 24px, rgba(0, 0, 0, 0) 40px, #ffffff 40px, #ffffff 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 68px, #ffffff 68px, #ffffff 72px, rgba(0, 0, 0, 0) 72px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 12px, #ffffff 12px, #ffffff 16px, rgba(0, 0, 0, 0) 16px, rgba(0, 0, 0, 0) 112px), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 12px, #ffffff 12px, #ffffff 16px, rgba(0, 0, 0, 0) 16px, rgba(0, 0, 0, 0) 112px)
 }
 
 @keyframes rainbow {

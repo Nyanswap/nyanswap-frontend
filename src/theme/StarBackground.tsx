@@ -3,9 +3,13 @@ import '../assets/nyancat.scss'
 
 export default function StarBackground() {
   return (
-    <div className="background">
+    <div className="starBackground">
       <div className="stars">
-        <span></span>
+        {[...Array(160).keys()].map(i => (
+          <div className="star" key={i}>
+            <span />
+          </div>
+        ))}
       </div>
     </div>
   )
