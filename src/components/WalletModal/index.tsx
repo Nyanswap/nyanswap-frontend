@@ -264,6 +264,8 @@ export default function WalletModal({
       }
 
       // return rest of options
+      if (option.name === 'Fortmatic' || option.name === 'Portis') return null
+
       return (
         !isMobile &&
         !option.mobileOnly && (

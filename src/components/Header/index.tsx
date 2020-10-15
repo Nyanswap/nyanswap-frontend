@@ -213,7 +213,7 @@ export default function Header() {
           <NavLinkWrapper>
             <StyledNavLink to={'/swap'}>{t('swap')}</StyledNavLink>
             <StyledNavLink to={'/pool'}>{t('pool')}</StyledNavLink>
-            <StyledNavLink to={'/charts'}>{t('charts')}</StyledNavLink>
+            {/* <StyledNavLink to={'/charts'}>{t('charts')}</StyledNavLink> */}
           </NavLinkWrapper>
         </HeaderElement>
         <HeaderControls>
