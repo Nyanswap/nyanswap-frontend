@@ -5,7 +5,7 @@ export default function StarBackground() {
   return (
     <div className="starBackground">
       <div className="stars">
-        {[...Array(160).keys()].map(i => (
+        {[...Array(230).keys()].map(i => (
           <div className="star" key={i}>
             <span />
           </div>

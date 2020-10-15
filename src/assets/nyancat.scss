@@ -225,51 +225,102 @@ $purple: #55ffa6;
   @for $i from 91 through 100 {
     .star:nth-child(#{$i}) {
       top: ($i - 90) * 100px;
-      left: ($i - 90) * 100 - 180px;
+      left: ($i - 90) * 100 + 1620px;
     }
   }
 
   @for $i from 101 through 110 {
     .star:nth-child(#{$i}) {
       top: ($i - 100) * 100px;
-      left: ($i - 100) * 100 - 360px;
+      left: ($i - 100) * 100 + 1800px;
     }
   }
 
-  @for $i from 111 through 120{
+  @for $i from 111 through 120 {
     .star:nth-child(#{$i}) {
       top: ($i - 110) * 100px;
-      left: ($i - 110) * 100 - 540px;
+      left: ($i - 110) * 100 + 1980px;
     }
   }
 
-  @for $i from 121 through 130{
+  @for $i from 121 through 130 {
     .star:nth-child(#{$i}) {
       top: ($i - 120) * 100px;
-      left: ($i - 120) * 100 - 720px;
+      left: ($i - 120) * 100 - 180px;
     }
   }
 
-  @for $i from 131 through 140{
+  @for $i from 131 through 140 {
     .star:nth-child(#{$i}) {
       top: ($i - 130) * 100px;
-      left: ($i - 130) * 100 - 900px;
+      left: ($i - 130) * 100 - 360px;
     }
   }
 
-  @for $i from 141 through 150 {
+  @for $i from 141 through 150{
     .star:nth-child(#{$i}) {
       top: ($i - 140) * 100px;
-      left: ($i - 140) * 100 + 1620px;
+      left: ($i - 140) * 100 - 540px;
     }
   }
 
-  @for $i from 151 through 160 {
+  @for $i from 151 through 160{
     .star:nth-child(#{$i}) {
       top: ($i - 150) * 100px;
-      left: ($i - 150) * 100 + 1800px;
+      left: ($i - 150) * 100 - 720px;
     }
   }
+
+  @for $i from 161 through 170{
+    .star:nth-child(#{$i}) {
+      top: ($i - 160) * 100px;
+      left: ($i - 160) * 100 - 900px;
+    }
+  }
+
+  @for $i from 171 through 180 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 170) * 100px;
+      left: ($i - 170) * 100 - 1080px;
+    }
+  }
+
+  @for $i from 181 through 190 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 180) * 100px;
+      left: ($i - 180) * 100 - 1260px;
+    }
+  }
+
+  @for $i from 191 through 200 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 190) * 100px;
+      left: ($i - 190) * 100 - 1440px;
+    }
+  }
+
+  @for $i from 201 through 210 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 200) * 100px;
+      left: ($i - 200) * 100 - 1620px;
+    }
+  }
+
+  @for $i from 211 through 220 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 210) * 100px;
+      left: ($i - 210) * 100 - 1800px;
+    }
+  }
+
+  @for $i from 221 through 230 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 220) * 100px;
+      left: ($i - 220) * 100 - 1980px;
+    }
+  }
+
+
 }
 
 .body {
