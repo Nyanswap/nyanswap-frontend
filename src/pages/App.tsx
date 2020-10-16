@@ -21,7 +21,7 @@ import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
-import Nyancat from '../theme/Nyancat'
+import Nyancat from '../theme/nyancat'
 import StarBackground from '../theme/StarBackground'
 
 const AppWrapper = styled.div`
