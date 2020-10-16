@@ -130,6 +130,7 @@ $purple: #55ffa6;
   position: fixed;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   max-width: 1980px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -159,164 +160,164 @@ $purple: #55ffa6;
       animation: star 300ms step-start infinite alternate;
     }
   }
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .star:nth-child(#{$i}) {
       top: $i * 100px;
       left: $i * 100px;
     }
   }
 
-  @for $i from 11 through 20 {
+  @for $i from 16 through 30 {
     .star:nth-child(#{$i}) {
-      top: ($i - 10) * 100px;
-      left: ($i - 10) * 100 + 180px;
+      top: ($i - 15) * 100px;
+      left: ($i - 15) * 100 + 180px;
     }
   }
 
-  @for $i from 21 through 30 {
-    .star:nth-child(#{$i}) {
-      top: ($i - 20) * 100px;
-      left: ($i - 20) * 100 + 360px;
-    }
-  }
-
-  @for $i from 31 through 40 {
+  @for $i from 31 through 45 {
     .star:nth-child(#{$i}) {
       top: ($i - 30) * 100px;
-      left: ($i - 30) * 100 + 540px;
+      left: ($i - 30) * 100 + 360px;
     }
   }
 
-  @for $i from 41 through 50 {
+  @for $i from 46 through 60 {
     .star:nth-child(#{$i}) {
-      top: ($i - 40) * 100px;
-      left: ($i - 40) * 100 + 720px;
+      top: ($i - 45) * 100px;
+      left: ($i - 45) * 100 + 540px;
     }
   }
 
-  @for $i from 51 through 60 {
-    .star:nth-child(#{$i}) {
-      top: ($i - 50) * 100px;
-      left: ($i - 50) * 100 + 900px;
-    }
-  }
-
-  @for $i from 61 through 70 {
+  @for $i from 61 through 75 {
     .star:nth-child(#{$i}) {
       top: ($i - 60) * 100px;
-      left: ($i - 60) * 100 + 1080px;
+      left: ($i - 60) * 100 + 720px;
     }
   }
 
-  @for $i from 71 through 80 {
+  @for $i from 76 through 90 {
     .star:nth-child(#{$i}) {
-      top: ($i - 70) * 100px;
-      left: ($i - 70) * 100 + 1260px;
+      top: ($i - 75) * 100px;
+      left: ($i - 75) * 100 + 900px;
     }
   }
 
-  @for $i from 81 through 90 {
-    .star:nth-child(#{$i}) {
-      top: ($i - 80) * 100px;
-      left: ($i - 80) * 100 + 1440px;
-    }
-  }
-
-  @for $i from 91 through 100 {
+  @for $i from 91 through 105 {
     .star:nth-child(#{$i}) {
       top: ($i - 90) * 100px;
-      left: ($i - 90) * 100 + 1620px;
+      left: ($i - 90) * 100 + 1080px;
     }
   }
 
-  @for $i from 101 through 110 {
+  @for $i from 106 through 120 {
     .star:nth-child(#{$i}) {
-      top: ($i - 100) * 100px;
-      left: ($i - 100) * 100 + 1800px;
+      top: ($i - 105) * 100px;
+      left: ($i - 105) * 100 + 1260px;
     }
   }
 
-  @for $i from 111 through 120 {
-    .star:nth-child(#{$i}) {
-      top: ($i - 110) * 100px;
-      left: ($i - 110) * 100 + 1980px;
-    }
-  }
-
-  @for $i from 121 through 130 {
+  @for $i from 121 through 135 {
     .star:nth-child(#{$i}) {
       top: ($i - 120) * 100px;
-      left: ($i - 120) * 100 - 180px;
+      left: ($i - 120) * 100 + 1440px;
     }
   }
 
-  @for $i from 131 through 140 {
+  @for $i from 136 through 150 {
     .star:nth-child(#{$i}) {
-      top: ($i - 130) * 100px;
-      left: ($i - 130) * 100 - 360px;
+      top: ($i - 135) * 100px;
+      left: ($i - 135) * 100 + 1620px;
     }
   }
 
-  @for $i from 141 through 150{
-    .star:nth-child(#{$i}) {
-      top: ($i - 140) * 100px;
-      left: ($i - 140) * 100 - 540px;
-    }
-  }
-
-  @for $i from 151 through 160{
+  @for $i from 151 through 165 {
     .star:nth-child(#{$i}) {
       top: ($i - 150) * 100px;
-      left: ($i - 150) * 100 - 720px;
+      left: ($i - 150) * 100 + 1800px;
     }
   }
 
-  @for $i from 161 through 170{
+  @for $i from 166 through 180 {
     .star:nth-child(#{$i}) {
-      top: ($i - 160) * 100px;
-      left: ($i - 160) * 100 - 900px;
+      top: ($i - 165) * 100px;
+      left: ($i - 165) * 100 + 1980px;
     }
   }
 
-  @for $i from 171 through 180 {
-    .star:nth-child(#{$i}) {
-      top: ($i - 170) * 100px;
-      left: ($i - 170) * 100 - 1080px;
-    }
-  }
-
-  @for $i from 181 through 190 {
+  @for $i from 181 through 195 {
     .star:nth-child(#{$i}) {
       top: ($i - 180) * 100px;
-      left: ($i - 180) * 100 - 1260px;
+      left: ($i - 180) * 100 - 180px;
     }
   }
 
-  @for $i from 191 through 200 {
+  @for $i from 196 through 210 {
     .star:nth-child(#{$i}) {
-      top: ($i - 190) * 100px;
-      left: ($i - 190) * 100 - 1440px;
+      top: ($i - 195) * 100px;
+      left: ($i - 195) * 100 - 360px;
     }
   }
 
-  @for $i from 201 through 210 {
-    .star:nth-child(#{$i}) {
-      top: ($i - 200) * 100px;
-      left: ($i - 200) * 100 - 1620px;
-    }
-  }
-
-  @for $i from 211 through 220 {
+  @for $i from 211 through 225{
     .star:nth-child(#{$i}) {
       top: ($i - 210) * 100px;
-      left: ($i - 210) * 100 - 1800px;
+      left: ($i - 210) * 100 - 540px;
     }
   }
 
-  @for $i from 221 through 230 {
+  @for $i from 226 through 240{
     .star:nth-child(#{$i}) {
-      top: ($i - 220) * 100px;
-      left: ($i - 220) * 100 - 1980px;
+      top: ($i - 225) * 100px;
+      left: ($i - 225) * 100 - 720px;
+    }
+  }
+
+  @for $i from 241 through 255{
+    .star:nth-child(#{$i}) {
+      top: ($i - 240) * 100px;
+      left: ($i - 240) * 100 - 900px;
+    }
+  }
+
+  @for $i from 256 through 270 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 255) * 100px;
+      left: ($i - 255) * 100 - 1080px;
+    }
+  }
+
+  @for $i from 271 through 295 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 270) * 100px;
+      left: ($i - 270) * 100 - 1260px;
+    }
+  }
+
+  @for $i from 291 through 305 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 290) * 100px;
+      left: ($i - 290) * 100 - 1440px;
+    }
+  }
+
+  @for $i from 306 through 320 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 305) * 100px;
+      left: ($i - 305) * 100 - 1620px;
+    }
+  }
+
+  @for $i from 321 through 335 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 320) * 100px;
+      left: ($i - 320) * 100 - 1800px;
+    }
+  }
+
+  @for $i from 336 through 350 {
+    .star:nth-child(#{$i}) {
+      top: ($i - 335) * 100px;
+      left: ($i - 335) * 100 - 1980px;
     }
   }
 
