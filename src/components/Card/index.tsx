@@ -34,13 +34,13 @@ export const YellowCard = styled(Card)`
 
 export const PinkCard = styled(Card)`
   background-color: rgba(255, 0, 122, 0.03);
-  color: ${({ theme }) => theme.primary1};
+  color: ${({ theme }) => theme.primaryText2};
   font-weight: 500;
 `
 
 const BlueCardStyled = styled(Card)`
   background-color: ${({ theme }) => theme.primary5};
-  color: ${({ theme }) => theme.primary1};
+  color: ${({ theme }) => theme.primaryText2};
   border-radius: 12px;
   width: fit-content;
 `

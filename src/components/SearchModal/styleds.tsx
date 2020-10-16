@@ -13,7 +13,7 @@ export const ModalInfo = styled.div`
 `
 
 export const FadedSpan = styled(RowFixed)`
-  color: ${({ theme }) => theme.primary1};
+  color: ${({ theme }) => theme.primaryText2};
   font-size: 14px;
 `
 

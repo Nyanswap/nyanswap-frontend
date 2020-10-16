@@ -67,6 +67,7 @@ export function colors(darkMode: boolean): Colors {
 
     // color text
     primaryText1: darkMode ? '#000000' : '#000000',
+    primaryText2: darkMode ? '#27ae60' : '#27ae60',
 
     // secondary colors
     secondary1: darkMode ? '#55ffa6' : '#55ffa6',
@@ -131,7 +132,7 @@ export const TYPE = {
     return <TextWrapper fontWeight={500} color={'text2'} {...props} />
   },
   link(props: TextProps) {
-    return <TextWrapper fontWeight={500} color={'primary1'} {...props} />
+    return <TextWrapper fontWeight={500} color={'primaryText2'} {...props} />
   },
   black(props: TextProps) {
     return <TextWrapper fontWeight={500} color={'text1'} {...props} />
@@ -149,7 +150,7 @@ export const TYPE = {
     return <TextWrapper fontWeight={400} fontSize={14} {...props} />
   },
   blue(props: TextProps) {
-    return <TextWrapper fontWeight={500} color={'primary1'} {...props} />
+    return <TextWrapper fontWeight={500} color={'primaryText2'} {...props} />
   },
   yellow(props: TextProps) {
     return <TextWrapper fontWeight={500} color={'yellow1'} {...props} />

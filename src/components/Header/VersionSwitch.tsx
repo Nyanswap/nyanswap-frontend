@@ -30,7 +30,7 @@ const VersionToggle = styled(({ enabled, ...rest }: VersionToggleProps) => <Link
   opacity: ${({ enabled }) => (enabled ? 1 : 0.5)};
   cursor: ${({ enabled }) => (enabled ? 'pointer' : 'default')};
   background: ${({ theme }) => theme.bg3};
-  color: ${({ theme }) => theme.primary1};
+  color: ${({ theme }) => theme.primaryText2};
   display: flex;
   width: fit-content;
   margin-left: 0.5rem;
