@@ -48,7 +48,7 @@ export default function ListUpdatePopup({
       Object.keys(tokensChanged).reduce((memo, chainId: any) => memo + Object.keys(tokensChanged[chainId]).length, 0),
     [tokensChanged]
   )
-
+  return <div></div>
   return (
     <AutoRow>
       <AutoColumn style={{ flex: '1' }} gap="8px">
