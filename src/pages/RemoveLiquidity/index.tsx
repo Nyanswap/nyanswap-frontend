@@ -115,7 +115,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'Nyanswap',
+      name: 'Nyanswap LP Token',
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
