@@ -1,13 +1,14 @@
-import { getVersionUpgrade, minVersionBump, VersionUpgrade } from '@uniswap/token-lists'
+// import { getVersionUpgrade, minVersionBump, VersionUpgrade } from '@uniswap/token-lists'
+import { getVersionUpgrade, VersionUpgrade } from '@uniswap/token-lists'
 import { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useActiveWeb3React } from '../../hooks'
 import { useFetchListCallback } from '../../hooks/useFetchListCallback'
 import useInterval from '../../hooks/useInterval'
 import useIsWindowVisible from '../../hooks/useIsWindowVisible'
-import { addPopup } from '../application/actions'
+// import { addPopup } from '../application/actions'
 import { AppDispatch, AppState } from '../index'
-import { acceptListUpdate } from './actions'
+// import { acceptListUpdate } from './actions'
 
 export default function Updater(): null {
   const { library } = useActiveWeb3React()
@@ -50,8 +51,10 @@ export default function Updater(): null {
             throw new Error('unexpected no version bump')
           case VersionUpgrade.PATCH:
           case VersionUpgrade.MINOR:
-            const min = minVersionBump(list.current.tokens, list.pendingUpdate.tokens)
+            // const min = minVersionBump(list.current.tokens, list.pendingUpdate.tokens)
             // automatically update minor/patch as long as bump matches the min update
+            break
+            /*
             if (bump >= min) {
               dispatch(acceptListUpdate(listUrl))
               dispatch(
@@ -72,9 +75,11 @@ export default function Updater(): null {
                 `List at url ${listUrl} could not automatically update because the version bump was only PATCH/MINOR while the update had breaking changes and should have been MAJOR`
               )
             }
+            */
             break
 
           case VersionUpgrade.MAJOR:
+            /*
             dispatch(
               addPopup({
                 key: listUrl,
@@ -89,6 +94,7 @@ export default function Updater(): null {
                 removeAfterMs: null
               })
             )
+            */
         }
       }
     })
