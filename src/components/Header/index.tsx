@@ -11,6 +11,7 @@ import styled from 'styled-components'
 import LogoTypeOnlyColor from '../../assets/svg/logo_typeonly_color.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
+import { ExternalLink } from '../../theme'
 
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
@@ -213,7 +214,26 @@ export default function Header() {
           <NavLinkWrapper>
             <StyledNavLink to={'/swap'}>{t('swap')}</StyledNavLink>
             <StyledNavLink to={'/pool'}>{t('pool')}</StyledNavLink>
-            {/* <StyledNavLink to={'/charts'}>{t('charts')}</StyledNavLink> */}
+            <ExternalLink
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '1rem',
+                borderRadius: '3rem',
+                outline: 'none',
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: `#FFFFFF`,
+                opacity: '0.5',
+                fontSize: '20px',
+                margin: '0px 24px',
+                display: 'flex',
+                flexFlow: 'row nowrap'
+              }}
+              href="https://info.nyanswap.com/"
+            >
+              {t('charts')}
+            </ExternalLink>
           </NavLinkWrapper>
         </HeaderElement>
         <HeaderControls>
