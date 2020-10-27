@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:#003dff}
+        </style>
+    </defs>
+    <g id="logo_thumbnail" transform="translate(-550 -350)">
+        <path id="Path_545" fill="#231f20" d="M568.889 351.111V350h-17.778v1.111H550v17.778h1.111V370h17.778v-1.111H570v-17.778z"/>
+        <path id="Path_546" d="M568.889 353.333v-1.111h-15.556v1.111h-1.111v15.556h1.111V370h15.556v-1.111H570v-15.556z" class="cls-2" transform="translate(-1.111 -1.111)"/>
+        <path id="Path_547" fill="#55ffa6" d="M568.889 355.556v-1.111h-13.333v1.111h-1.112v13.333h1.112V370h13.333v-1.111H570v-13.333z" transform="translate(-2.222 -2.222)"/>
+        <path id="Path_548" d="M560 364.445h2.222v-1.111h-1.111v-1.111H560v-1.111h6.667V360H560v-1.111h1.111v-1.111h1.111v-1.111H560v1.111h-1.111v1.111h-1.111V360h-1.111v1.111h1.111v1.111h1.111v1.111H560z" class="cls-2" transform="translate(-3.334 -3.333)"/>
+        <path id="Path_549" d="M573.333 371.111h-1.111V370h-1.111v-1.111H570v-1.111h-2.222v1.111h1.111V370H570v1.111h-6.667v1.11H570v1.111h-1.111v1.111h-1.111v1.111H570v-1.111h1.111v-1.111h1.111v-1.111h1.111z" class="cls-2" transform="translate(-6.667 -8.889)"/>
+    </g>
+</svg>

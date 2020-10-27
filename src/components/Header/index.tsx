@@ -232,8 +232,9 @@ export default function Header() {
               }}
               href="https://info.nyanswap.com/"
             >
-              {t('charts')}
+              {t('Charts')}
             </ExternalLink>
+            <StyledNavLink to={'/promotion'}>{t('Promotion')}</StyledNavLink>
           </NavLinkWrapper>
         </HeaderElement>
         <HeaderControls>

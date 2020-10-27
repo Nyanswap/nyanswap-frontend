@@ -90,6 +90,10 @@ const StyledLink = styled.a`
   color: ${({ theme }) => theme.primaryText2};
   font-weight: 500;
 
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    margin: 0px 6px !important;
+  `};
+
   :hover {
     text-decoration: underline;
   }
