@@ -111,7 +111,7 @@ const StyledNavLink = styled(NavLink).attrs({
   color: ${({ theme }) => theme.text3};
   opacity: 0.5;
   font-size: 20px;
-  margin: 0px 24px;
+  margin: 0px 12px;
 
   &.${activeClassName} {
     opacity: 1;
@@ -226,7 +226,7 @@ export default function Header() {
                 color: `#FFFFFF`,
                 opacity: '0.5',
                 fontSize: '20px',
-                margin: '0px 24px',
+                margin: '0px 12px',
                 display: 'flex',
                 flexFlow: 'row nowrap'
               }}
