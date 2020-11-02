@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import LogoTypeOnlyColor from '../../assets/svg/logo_typeonly_color.svg'
+import LogoThumbnail from '../../assets/svg/logo_thumbnail.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 import { ExternalLink } from '../../theme'
@@ -159,15 +160,20 @@ const NetworkCard = styled(YellowCard)`
 
 const NyanIconDiv = styled.div`
   display: flex;
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    img { 
-      width: 120px;
-    }
-  `};
 `
 
 const NyanIcon = styled.img`
   width: 280px;
+  content:url("${LogoTypeOnlyColor}");
+  ${({ theme }) => theme.mediaWidth.upToMedium`
+    width: 150px;
+  `};
+
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+  width: 45px;
+  content:url("${LogoThumbnail}");
+  `}
+  
 `
 
 const HeaderControls = styled.div`
@@ -207,7 +213,7 @@ export default function Header() {
         <HeaderElement style={{ width: '100%' }}>
           <Title href=".">
             <NyanIconDiv>
-              <NyanIcon src={LogoTypeOnlyColor} alt="logo" />
+              <NyanIcon alt="logo" />
             </NyanIconDiv>
           </Title>
 
@@ -234,7 +240,7 @@ export default function Header() {
             >
               {t('Charts')}
             </ExternalLink>
-            <StyledNavLink to={'/promotion'}>{t('Promotion')}</StyledNavLink>
+            <StyledNavLink to={'/promotion'}>{t('Event')}</StyledNavLink>
           </NavLinkWrapper>
         </HeaderElement>
         <HeaderControls>
